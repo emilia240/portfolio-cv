@@ -7,9 +7,29 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
+  max-width: full;
+  margin:0 !important; 
+  padding:0 !important; 
   font-weight: normal;
 }
 
+/* Media Queries */
+@media (max-width: 480px) {
+  /* Mobile styles */
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Tablet styles */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Desktop styles */
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Large Desktop styles */
+}
+
+@media (min-width: 1441px) {
+  /* 4K styles */
+}
