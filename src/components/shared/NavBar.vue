@@ -7,8 +7,8 @@ const isOpen = ref(false)
 
 <template>
   <nav class="w-full p-0 m-0 relative z-50 bg-[#161225] text-[#DAC6E1]">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="flex items-center justify-between !py-6">
+    <div class="mx-auto max-w-7xl !px-6 !lg:px-8">
+      <div class="flex items-center justify-between !py-5">
         <div class="flex flex-1"></div>
 
         <!-- nav options -->
@@ -17,19 +17,19 @@ const isOpen = ref(false)
             href="#about" 
             class="text-lg font-medium hover:text-accent transition-colors"
           >
-            About me
+            <h5>About me</h5>
           </a>
           <a 
             href="#contents" 
             class="text-lg font-medium hover:text-accent transition-colors"
           >
-            Table of contents
+            <h5>Table of contents</h5>
           </a>
           <a 
             href="#contact" 
             class="text-lg font-medium hover:text-accent transition-colors"
           >
-            Contact me
+            <h5>Contact me</h5>
           </a>
         </div>
 
@@ -40,7 +40,7 @@ const isOpen = ref(false)
             to="/selected-works" 
             class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
           >
-            Selected works
+            <h5>Selected works</h5>
             <svg 
               class="h-5 w-5 transition-transform group-hover:translate-x-1" 
               viewBox="0 0 24 24" 
@@ -56,7 +56,7 @@ const isOpen = ref(false)
             to="/" 
             class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
           >
-            Back to frontpage
+            <h5>Back to frontpage</h5> 
             <svg 
               class="h-5 w-5 transition-transform group-hover:-translate-x-1" 
               viewBox="0 0 24 24" 
@@ -96,11 +96,11 @@ const isOpen = ref(false)
       class="lg:hidden"
     >
       <div class="fixed inset-0 z-50 bg-black/25" @click="isOpen = false"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#ededed] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[#161225]/10">
         <div class="flex items-center justify-end">
           <button 
             type="button" 
-            class="-m-2.5 rounded-md p-2.5 text-gray-700"
+            class="-m-2.5 rounded-md p-2.5 text-[#161225]"
             @click="isOpen = false"
           >
             <span class="sr-only">Close menu</span>
@@ -116,34 +116,34 @@ const isOpen = ref(false)
           </button>
         </div>
         <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="-my-6 divide-y divide-[#161225]/10">
             <div class="space-y-2 py-6">
               <a 
                 href="#about" 
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
-                About me
+                <h5>About me</h5>
               </a>
               <a 
                 href="#contents" 
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
-                Table of contents
+                <h5>Table of contents</h5>
               </a>
               <a 
                 href="#contact" 
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
-                Contact me
+                <h5>Contact me</h5>
               </a>
             </div>
             <div class="py-6">
               <RouterLink 
                 :to="$route.path === '/' ? '/selected-works' : '/'" 
-                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
                 {{ $route.path === '/' ? 'Selected works' : 'Back to frontpage' }}
@@ -157,6 +157,16 @@ const isOpen = ref(false)
 </template>
 
 <style scoped>
+
+nav {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+
+
 /*underline animation for desktop links */
 @media (min-width: 1024px) {
   a:not(.router-link) {
