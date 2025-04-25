@@ -1,21 +1,16 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import NavBar from '@/components/shared/NavBar.vue';
+import NavBar from './components/shared/NavBar.vue';
+import FooterSection from './components/shared/FooterSection.vue';
 </script>
 
 <template>
-  <header>
-    
-    <nav>
-
-      <NavBar />
-
-
-    </nav>
-    
-  </header>
+    <NavBar />
+  
+  
 
   <RouterView />
+  <FooterSection/>
 </template>
 
 <style scoped>

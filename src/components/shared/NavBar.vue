@@ -8,11 +8,11 @@ const isOpen = ref(false) // Controls mobile menu visibility
 <template>
   <nav class="w-full !p-0 !m-0 relative z-50 bg-[#161225] text-[#DAC6E1]">
     <div class="mx-auto max-w-7xl !px-8 lg:px-4">
-      <div class="flex items-center justify-between !py-5">
+      <div class="flex items-center justify-between !py-4">
         <div class="flex flex-1"></div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex lg:gap-x-12">
+        <div class="hidden lg:flex lg:gap-x-15">
           <a href="#about" class="text-lg font-medium hover:text-accent transition-colors">
             <h5>About me</h5>
           </a>

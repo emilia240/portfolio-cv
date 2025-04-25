@@ -1,4 +1,7 @@
 <script setup>
+import HeroSection from '@/components/shared/HeroSection.vue';
+
+
 import { ref } from 'vue'
 
 import { useProjects } from '@/modules/useProjects'
@@ -12,6 +15,16 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
 
 
 <template>
+  <HeroSection
+      h2-text=""
+      h1-text="SELECTED WORKS"
+      h5-text="Take a look at what I had worked on"
+      circle-text="Enjoy"
+      cta-text="BACK TO FRONTPAGE"
+      cta-arrow="←"
+      cta-link="/"
+  />
+
   <div class="selected-works">
     <h1 class="page-title">Selected Works</h1>
     
@@ -36,7 +49,6 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
       </button>
     </div>
 
-    <!-- Personal Projects View -->
     <div v-if="tab === 'personal'" class="project-grid personal-view">
       <ProjectCard 
         v-for="project in personalProjects" 
@@ -45,7 +57,6 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
       />
     </div>
 
-    <!-- School Projects View -->
     <div v-else-if="tab === 'school'" class="project-list school-view">
       <ProjectCardLarge 
         v-for="project in schoolProjects" 
@@ -54,7 +65,6 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
       />
     </div>
 
-    <!-- Initial/All Projects View -->
     <div v-else class="project-grid initial-view">
       <ProjectCard 
         v-for="project in allProjects" 
@@ -66,5 +76,7 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
 </template>
 
 <style scoped>
-
+/* ensure that the active class is defined in your <style scoped> section to visually indicate the active tab.
+ */
+ 
 </style>
