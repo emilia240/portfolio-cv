@@ -15,13 +15,7 @@
     </div>
 
     <!-- Stars -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      class="absolute w-4 h-4 top-[18%] left-[50%] transform -translate-x-1/2 fill-[#E476E4] animate-wiggle"
-    >
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
-    </svg>
+    
     <!-- COME BACK, JACK- add your stars and change color/or bring pngs already colored-->
 
     <!-- Text Content -->
@@ -199,5 +193,10 @@ a {
 p {
   font-family: var(--body-font);
   font-weight: 400;
+}
+
+.arrow {
+  font-size: 2rem;
+  font-weight: 900;
 }
 </style>

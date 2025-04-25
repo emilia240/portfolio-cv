@@ -4,6 +4,7 @@ import AboutSection from '@/components/sections/AboutSection.vue';
 import TableOfContents from '@/components/sections/TableOfContents.vue';
 import VideoCV from '@/components/sections/VideoCV.vue';
 import ProcessSection from '@/components/sections/ProcessSection.vue';
+import SkillsSection from '@/components/sections/SkillsSection.vue';
 import ContactSection from '@/components/shared/ContactSection.vue';
 </script>
 
@@ -22,6 +23,7 @@ import ContactSection from '@/components/shared/ContactSection.vue';
     <TableOfContents />
     <VideoCV />
     <ProcessSection />
+    <SkillsSection />
     <ContactSection />
   </main>
 </template>
