@@ -6,6 +6,7 @@ import VideoCV from '@/components/sections/VideoCV.vue';
 import ProcessSection from '@/components/sections/ProcessSection.vue';
 import SkillsSection from '@/components/sections/SkillsSection.vue';
 import ContactSection from '@/components/shared/ContactSection.vue';
+import FooterSection from '@/components/shared/FooterSection.vue';
 </script>
 
 <template>
@@ -18,11 +19,12 @@ import ContactSection from '@/components/shared/ContactSection.vue';
       cta-text="SEE MY WORK"
       cta-link="/selected-works"
      />
-    <AboutSection />
-    <TableOfContents />
-    <VideoCV />
-    <ProcessSection />
-    <SkillsSection />
-    <ContactSection />
+    <AboutSection id="about" /> 
+    <TableOfContents id="contents" /> 
+    <VideoCV id="video-cv" />
+    <ProcessSection id="my-process" /> 
+    <SkillsSection id="skills" /> 
+    <ContactSection id="contact" variant="home" />
+    <FooterSection variant="home" />
   </main>
 </template>

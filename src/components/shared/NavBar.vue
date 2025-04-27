@@ -1,8 +1,8 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
+import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
 
-const isOpen = ref(false) // Controls mobile menu visibility
+const isOpen = ref(false); // Controls mobile menu visibility
 </script>
 
 <template>
@@ -13,52 +13,91 @@ const isOpen = ref(false) // Controls mobile menu visibility
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex lg:gap-x-15">
-          <a href="#about" class="text-lg font-medium hover:text-accent transition-colors">
-            <h5>About me</h5>
-          </a>
-          <a href="#contents" class="text-lg font-medium hover:text-accent transition-colors">
-            <h5>Table of contents</h5>
-          </a>
-          <a href="#contact" class="text-lg font-medium hover:text-accent transition-colors">
+          <!-- Show "Contact me" only on SelectedWorksView -->
+          <a
+            v-if="$route.path === '/selected-works'"
+            href="#contact"
+            class="text-lg font-medium hover:text-accent transition-colors"
+          >
             <h5>Contact me</h5>
           </a>
+          <!-- Show other links on HomeView -->
+          <template v-else>
+            <a href="#about" class="text-lg font-medium hover:text-accent transition-colors">
+              <h5>About me</h5>
+            </a>
+            <a href="#contents" class="text-lg font-medium hover:text-accent transition-colors">
+              <h5>Table of contents</h5>
+            </a>
+            <a href="#contact" class="text-lg font-medium hover:text-accent transition-colors">
+              <h5>Contact me</h5>
+            </a>
+          </template>
         </div>
 
         <!-- Desktop Selected Works Button -->
         <div class="flex flex-1 justify-end">
-          <RouterLink 
+          <RouterLink
             v-if="$route.path === '/'"
             to="/selected-works"
             class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
           >
             <h5>Selected works</h5>
-            <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path color="var(--pink-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            <svg
+              class="h-5 w-5 transition-transform group-hover:translate-x-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                color="var(--pink-color)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
             </svg>
           </RouterLink>
-          
-          <RouterLink 
+
+          <RouterLink
             v-else
             to="/"
             class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
           >
             <h5>Back to frontpage</h5>
-            <svg class="h-5 w-5 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path color="var(--pink-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            <svg
+              class="h-5 w-5 transition-transform group-hover:-translate-x-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                color="var(--pink-color)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
             </svg>
           </RouterLink>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="flex lg:hidden">
-          <button 
-            type="button" 
+          <button
+            type="button"
             class="-m-2.5 !ml-4 inline-flex items-center justify-center rounded-md p-2.5 hover:bg-[#DAC6E1]/20 transition-colors cursor-pointer"
             @click="isOpen = true"
           >
             <span class="sr-only">Open menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
         </div>
@@ -69,19 +108,27 @@ const isOpen = ref(false) // Controls mobile menu visibility
     <div v-if="isOpen" class="lg:hidden">
       <!-- Clickable overlay to close menu -->
       <div class="fixed inset-0 z-50 bg-[#161225]/25" @click="isOpen = false"></div>
-      
+
       <!-- Menu Content -->
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#ededed] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[#161225]/10">
+      <div
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#ededed] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[#161225]/10"
+      >
         <!-- Close Button -->
         <div class="flex items-center justify-end">
-          <button 
-            type="button" 
+          <button
+            type="button"
             class="-m-2.5 rounded-md p-2.5 text-[#161225]"
             @click="isOpen = false"
           >
             <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -90,32 +137,44 @@ const isOpen = ref(false) // Controls mobile menu visibility
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-[#161225]/10">
             <div class="space-y-2 py-6">
-              <a 
-                href="#about" 
-                class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
-                @click="isOpen = false"
-              >
-                <h5>About me</h5>
-              </a>
-              <a 
-                href="#contents" 
-                class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
-                @click="isOpen = false"
-              >
-                <h5>Table of contents</h5>
-              </a>
-              <a 
-                href="#contact" 
+              <!-- Show "Contact me" only on SelectedWorksView -->
+              <a
+                v-if="$route.path === '/selected-works'"
+                href="#contact"
                 class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
                 <h5>Contact me</h5>
               </a>
+              <!-- Show other links on HomeView -->
+              <template v-else>
+                <a
+                  href="#about"
+                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  @click="isOpen = false"
+                >
+                  <h5>About me</h5>
+                </a>
+                <a
+                  href="#contents"
+                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  @click="isOpen = false"
+                >
+                  <h5>Table of contents</h5>
+                </a>
+                <a
+                  href="#contact"
+                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  @click="isOpen = false"
+                >
+                  <h5>Contact me</h5>
+                </a>
+              </template>
             </div>
-            
+
             <!-- Mobile Selected Works Button -->
             <div class="py-6">
-              <RouterLink 
+              <RouterLink
                 v-if="$route.path === '/'"
                 to="/selected-works"
                 class="text-center block px-6 py-2.5 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
@@ -123,8 +182,8 @@ const isOpen = ref(false) // Controls mobile menu visibility
               >
                 Selected works
               </RouterLink>
-              
-              <RouterLink 
+
+              <RouterLink
                 v-else
                 to="/"
                 class="text-center block px-6 py-2.5 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
@@ -153,7 +212,7 @@ nav {
   a:not(.router-link) {
     position: relative;
   }
-  
+
   a:not(.router-link)::after {
     content: '';
     position: absolute;
@@ -164,7 +223,7 @@ nav {
     background-color: currentColor;
     transition: width 0.3s ease;
   }
-  
+
   a:not(.router-link):hover::after {
     width: 100%;
   }

@@ -1,22 +1,22 @@
 <template>
-    <section class="relative w-full min-h-[700px] md:min-h-[900px] bg-[#ededed] overflow-visible flex flex-col items-center !mt-[10%]">
+    <section class="relative w-full min-h-[700px] md:min-h-[900px] bg-[#ededed] overflow-visible flex flex-col items-center">
       <!-- Floating Circle -->
-      <div class="floating-circle absolute top-[20%] left-[5%] transform -translate-y-1/2 z-10 sm:!-top-[60px]">
+      <div class="floating-circle absolute top-1/5 left-[10%] transform -translate-y-1/2 z-10">
         <div class="circle w-56 h-56 md:w-72 md:h-72 border-2 border-[#6381FF] rounded-full flex justify-center items-center text-[#6381FF] text-2xl md:text-4xl font-vina-sans animate-float">
           <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">SKILLS</h3>
         </div>
       </div>
   
       <!-- First Row: Design -->
-      <div class="flex items-center justify-end w-full !pr-[10%] sm:!mt-[5%] xs:flex-col">
+      <div class="flex items-center justify-end w-full !pr-[10%]  xs:flex-col">
         <!-- Design Label -->
         <div class="!mr-[10%] !mt-[25%]">
-          <span class="font-forum text-3xl md:text-4xl sm:text-xl text-[#161225]">Design</span>
+          <span class="font-forum text-3xl md:text-4xl text-[#161225]">Design</span>
         </div>
         <!-- 3 Skill Cards -->
-        <div class="flex sm:text-sm sm:gap-[10%] sm:justify-center">
+        <div class="flex">
           <!-- Card 1 -->
-          <div class="w-[190px] h-[410px] sm:w-[120px] sm:h-[310px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
             <span class="font-vina-sans text-2xl text-[#E476E4]">POSTER</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">LOGOS</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">LAYOUTS</span>
@@ -24,14 +24,14 @@
             <span class="font-vina-sans text-2xl text-[#E476E4]">MOCKUPS</span>
           </div>
           <!-- Card 2 -->
-          <div class="w-[190px] h-[410px] sm:w-[120px] sm:h-[310px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
             <span class="font-vina-sans text-2xl text-[#E476E4]">STORYBOARDING</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">VIDEO EDITING</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">SOUND DESIGN</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">MOTION GRAPHICS</span>
           </div>
           <!-- Card 3 -->
-          <div class="w-[190px] h-[410px] sm:w-[120px] sm:h-[310px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
             <span class="font-vina-sans text-2xl text-[#E476E4]">UX RESEARCH</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">WIREFRAMING</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">PROTOTYPING</span>
@@ -52,16 +52,16 @@
           <span class="font-forum text-3xl md:text-4xl sm:text-xl text-[#161225]">Development</span>
         </div>
         <!-- 2 Skill Cards -->
-        <div class="flex sm:text-sm sm:gap-[10%] sm:justify-center xs:!p-[10px]">
+        <div class="flex xs:!p-[10px]">
           <!-- Card 1 -->
-          <div class="w-[190px] h-[410px] sm:w-[120px] sm:h-[300px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
             <span class="font-vina-sans text-2xl text-[#E476E4]">HTML</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">CSS</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">TAILWIND</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">GITHUB</span>
           </div>
           <!-- Card 2 -->
-          <div class="w-[190px] h-[410px] sm:w-[120px] sm:h-[300px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
             <span class="font-vina-sans text-2xl text-[#E476E4]">WORDPRESS</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">PHP</span>
             <span class="font-vina-sans text-2xl text-[#E476E4]">JAVASCRIPT</span>

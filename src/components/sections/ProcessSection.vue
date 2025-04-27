@@ -1,7 +1,7 @@
 <template>
     <section class="relative w-full min-h-[900px] md:min-h-[1100px] bg-[#ededed] overflow-visible flex flex-col items-center">
       <!-- Floating Circle -->
-      <div class="floating-circle absolute top-[15%] right-[8%] transform -translate-y-1/2 z-10 sm:!top-[10px] sm:!mt-[10px]">
+      <div class="floating-circle absolute top-[15%] right-[8%] transform -translate-y-1/2 z-10">
         <div class="circle w-56 h-56 md:w-72 md:h-72 border-2 border-[#6381FF] rounded-full flex justify-center items-center text-[#6381FF] text-2xl md:text-4xl font-vina-sans animate-float">
           <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">MY PROCESS</h3>
         </div>
@@ -18,7 +18,7 @@
       <img
           src="@/assets/images/flowers/purple-flower-small.png"
           alt="Flower"
-          class="purple absolute -right-[2%] top-3/6 -translate-y-1/2 w-[100px] md:w-[300px] h-auto  overflow-hidden"
+          class="purple absolute right-[2%] top-3/6 -translate-y-1/2 w-[100px] md:w-[300px] h-auto  overflow-hidden"
         />
 
       <!-- Stars -->
@@ -28,27 +28,27 @@
         :size="60"
       />
       <StarIcon
-        class="star-icon absolute top-[30%] left-[20%] z-20 sm:left-[10%]"
+        class="star-icon absolute top-[30%] left-[20%] z-20"
         :color="'#6381FF'"
         :size="40"
       />
       <StarIcon
-        class="star-icon absolute top-[70%] right-[10%] z-20 sm:right-[5%]"
+        class="star-icon absolute top-[70%] right-[10%] z-20"
         :color="'#6381FF'"
         :size="50"
       />
       <StarIcon
-        class="star-icon absolute top-[30%] right-[10%] z-20 sm:right-[5%]"
+        class="star-icon absolute top-[30%] right-[10%] z-20"
         :color="'#6381FF'"
         :size="20"
       />
       <StarIcon
-        class="star-icon absolute top-[80%] left-[20%] z-20 sm:left-[10%]"
+        class="star-icon absolute top-[80%] left-[20%] z-20"
         :color="'#6381FF'"
         :size="70"
       />
       <StarIcon
-        class="star-icon absolute top-[60%] left-[15%] z-20 sm:left-[5%]"
+        class="star-icon absolute top-[60%] left-[15%] z-20"
         :color="'#6381FF'"
         :size="32"
       />

@@ -1,18 +1,35 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import NavBar from './components/shared/NavBar.vue';
-import FooterSection from './components/shared/FooterSection.vue';
+
+
+const route = useRoute(); // Access the current route
+
 </script>
 
 <template>
-    <NavBar />
-  
-  
+  <div :class="route.path === '/selected-works' ? 'selected-works-bg' : 'default-bg'">
 
-  <RouterView />
-  <FooterSection/>
+    <NavBar />
+    <RouterView />
+
+  </div>
+
+ 
 </template>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 
+/* Default background color for other views */
+.default-bg {
+  background-color: #ededed; /* #ededed */
+}
+
+/* Background color for Selected Works view */
+.selected-works-bg {
+  background-color: #161225; 
+}
 </style>

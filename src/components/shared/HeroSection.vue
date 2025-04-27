@@ -15,7 +15,12 @@
     </div>
 
     <!-- Text Content with Stars Outline -->
-    <div class="absolute top-1/5 left-[58.33%] transform -translate-x-1/2 px-4">
+
+        <!-- Positioning fixed -->
+
+      <div
+        class="absolute !px-4"
+       :class="variant === 'home' ? 'top-1/5 left-[58.33%] transform -translate-x-1/2' : 'top-[19.55%] left-[62%] transform -translate-x-1/2'"> 
       <div class="relative w-fit">
         <!-- Stars -->
         <StarIcon
@@ -64,7 +69,7 @@
       <div class="w-40 h-40 md:w-48 md:h-48 bg-[#161225] flex justify-center items-center relative">
         <a :href="ctaLink" class="flex flex-col items-center justify-center text-[#E476E4] text-lg md:text-xl text-center no-underline">
           {{ ctaText }}
-          <ArrowIcon direction="right" :size="28" class="!mt-[10%] animate-slide" />
+          <ArrowIcon :direction="ctaArrow" :size="28" class="!mt-[10%] animate-slide" />
         </a>
       </div>
     </div>
@@ -90,6 +95,8 @@ defineProps({
   ctaText: { type: String, required: true },
   ctaArrow: { type: String, required: true },
   ctaLink: { type: String, required: true },
+  variant: { type: String, default: 'home' }, /* The positioning of my text content with stars goes to the left and down on SelectedWorks */
+
 });
 
   const sentences = [

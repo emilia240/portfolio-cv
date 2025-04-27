@@ -9,7 +9,7 @@
   
       <!-- About Me Text -->
       <div class="absolute top-1/5 left-1/2 transform -translate-x-1/2 text-left text-[#161225] !px-4 max-w-[600px]">
-        <p class="text-base md:text-lg sm:text-[18px] xs:text-[12px] ">
+        <p class="text-base md:text-lg sm:text-[18px] ">
           I'm a hands-on learner and creative problem solver currently pursuing a degree in Multimedia Design in Denmark.
           <br /><br />
           Through practical projects, self-guided learning, and collaboration, I have developed skills in graphic design, motion graphics, and front-end development.
@@ -26,16 +26,16 @@
             class="picture w-4/5 md:max-w-[300px] h-auto object-cover mx-auto sm:max-w-[100px] xs:max-w-[60px]"
           />
           <!-- Tape -->
-          <div class="absolute -top-2 -left-6 md:w-20 md:h-6 sm:w-15 sm:h-6 xs:w-18 xs:h-5 bg-[#6381FF] opacity-90 -rotate-20 z-10"></div>
+          <div class="absolute -top-2 -left-6 md:w-20 md:h-6 xs:w-18 xs:h-5 bg-[#6381FF] opacity-90 -rotate-20 z-10"></div>
           <!-- Blue Flower -->
           <img
             src="@/assets/images/flowers/blue-flower-small.png"
             alt="Blue Flower"
-            class="absolute w-16 h-auto sm:w-[100px] -bottom-30 -left-25 sm:top-30 xs:display-none"
+            class="absolute w-16 h-auto sm:w-[100px] -bottom-30 -left-25"
           />
           <!-- Blue Star -->
           <StarIcon
-            class="star-icon absolute -top-1/6  -right-20 z-20 sm:-top-3/5 sm:left-3/5"
+            class="star-icon absolute -top-1/6  -right-20 z-20"
             :color="'#6381FF'"
             :size="40"
           />
@@ -43,11 +43,11 @@
       </div>
   
       <!-- Sticky Note CTA -->
-      <div class="sticky-note-cta absolute top-[45%] left-[70%] transform translate-x-[-50%] translate-y-[20px] rotate-14 sm:top-[40%] sm:left-[90%]">
+      <div class="sticky-note-cta absolute top-[45%] left-[70%] transform translate-x-[-50%] translate-y-[20px] rotate-14">
         <div class="relative">
           <!-- Pink Star -->
           <StarIcon
-            class="star-icon absolute bottom-2/5  -left-50 z-20 sm:left-[20%] sm:-top-[80%]"
+            class="star-icon absolute bottom-2/5  -left-50 z-20"
             :color="'#E476E4'"
             :size="60"
           />
