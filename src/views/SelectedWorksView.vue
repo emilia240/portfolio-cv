@@ -1,5 +1,6 @@
 <script setup>
 import HeroSection from '@/components/shared/HeroSection.vue';
+import ContactSection from '@/components/shared/ContactSection.vue';
 
 
 import { ref } from 'vue'
@@ -21,7 +22,6 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
       h5-text="Take a look at what I had worked on"
       circle-text="Enjoy"
       cta-text="BACK TO FRONTPAGE"
-      cta-arrow="←"
       cta-link="/"
   />
 
@@ -73,10 +73,15 @@ const { schoolProjects, personalProjects, allProjects } = useProjects()
       />
     </div>
   </div>
+
+  <ContactSection />
+  
 </template>
 
 <style scoped>
 /* ensure that the active class is defined in your <style scoped> section to visually indicate the active tab.
  */
- 
+ template {
+  background-color: #161225;
+ }
 </style>

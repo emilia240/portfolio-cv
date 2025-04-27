@@ -1,9 +1,9 @@
 <template>
-    <section class="relative w-full min-h-[900px] md:min-h-[1200px] bg-[#ededed] overflow-visible flex flex-col items-center">
+    <section class="relative w-full min-h-[900px] md:min-h-[1100px] bg-[#ededed] overflow-visible flex flex-col items-center">
       <!-- Floating Circle -->
-      <div class="absolute top-[15%] right-[8%] transform -translate-y-1/2 z-10">
-        <div class="w-56 h-56 md:w-72 md:h-72 border-2 border-[#6381FF] rounded-full flex justify-center items-center text-[#6381FF] text-2xl md:text-4xl font-vina-sans animate-float">
-          MY PROCESS
+      <div class="floating-circle absolute top-[15%] right-[8%] transform -translate-y-1/2 z-10 sm:!top-[10px] sm:!mt-[10px]">
+        <div class="circle w-56 h-56 md:w-72 md:h-72 border-2 border-[#6381FF] rounded-full flex justify-center items-center text-[#6381FF] text-2xl md:text-4xl font-vina-sans animate-float">
+          <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">MY PROCESS</h3>
         </div>
       </div>
   
@@ -11,13 +11,53 @@
       <img
         src="@/assets/images/svg/desk lamp.svg"
         alt="Lamp"
-        class="absolute top-[35%] left-[5%] w-[140px] md:w-[235px] h-[235px] md:h-[395px] -translate-y-1/2 z-0"
+        class="lamp section-svg absolute top-[35%] left-[5%] w-[140px] md:w-[235px] h-[235px] md:h-[395px] -translate-y-1/2 z-0"
       />
   
+      <!-- Flower PNG (right) -->
+      <img
+          src="@/assets/images/flowers/purple-flower-small.png"
+          alt="Flower"
+          class="purple absolute -right-[2%] top-3/6 -translate-y-1/2 w-[100px] md:w-[300px] h-auto  overflow-hidden"
+        />
+
+      <!-- Stars -->
+      <StarIcon
+        class="star-icon absolute top-[10%] left-[5%] z-20 "
+        :color="'#6381FF'"
+        :size="60"
+      />
+      <StarIcon
+        class="star-icon absolute top-[30%] left-[20%] z-20 sm:left-[10%]"
+        :color="'#6381FF'"
+        :size="40"
+      />
+      <StarIcon
+        class="star-icon absolute top-[70%] right-[10%] z-20 sm:right-[5%]"
+        :color="'#6381FF'"
+        :size="50"
+      />
+      <StarIcon
+        class="star-icon absolute top-[30%] right-[10%] z-20 sm:right-[5%]"
+        :color="'#6381FF'"
+        :size="20"
+      />
+      <StarIcon
+        class="star-icon absolute top-[80%] left-[20%] z-20 sm:left-[10%]"
+        :color="'#6381FF'"
+        :size="70"
+      />
+      <StarIcon
+        class="star-icon absolute top-[60%] left-[15%] z-20 sm:left-[5%]"
+        :color="'#6381FF'"
+        :size="32"
+      />
+      
+
       <!-- Steps (Zig-Zag) -->
-      <div class="relative !mt-[10%] flex flex-col gap-10 z-10 w-full max-w-3xl mx-auto mt-32">
+      <div class="relative !mt-[10%] flex flex-col gap-10 z-10 w-full max-w-3xl mx-auto sm:!mt-32 sm:!p-10">
         <!-- Step 1 -->
-        <div class="flex items-start" style="margin-left: 0;">
+        <div class="flex items-start sm:text-sm" style="margin-left: 0;">
           <div class="flex-shrink-0 w-[50px] h-[50px] bg-[#161225] rounded-full flex items-center justify-center text-2xl text-[#E476E4] font-montserrat" style="font-weight: normal;">
             1
           </div>
@@ -69,7 +109,7 @@
           </div>
         </div>
         <!-- Step 5 -->
-        <div class="flex items-start" style="margin-left: 10%;">
+        <div class="flex items-start" style="margin-left: 30%;">
           <div class="flex-shrink-0 w-[50px] h-[50px] bg-[#161225] rounded-full flex items-center justify-center text-2xl text-[#E476E4] font-montserrat" style="font-weight: normal;">
             5
           </div>
@@ -85,9 +125,19 @@
     </section>
   </template>
   
+  <script setup>
+  import StarIcon from '@/components/shared/StarIcon.vue'
+
+
+
+  </script>
+
+
+
   <style scoped>
   .font-vina-sans {
     font-family: "Vina Sans", sans-serif;
+    font-weight: normal;
   }
   .font-forum {
     font-family: "Forum", serif;

@@ -14,22 +14,138 @@
 }
 
 /* Media Queries */
+
 @media (max-width: 480px) {
   /* Mobile styles */
+
+  .picture {
+    display: none;
+  }
+  .floating-circle {
+    margin: 0 auto !important;
+    left: 40% !important;
+    right: 40% !important;
+    width: 50px !important;
+    height: 50px !important;
+    top:40px !important;
+    margin-bottom: 30px !important;
+  }
+  .circle {
+    width: 100px !important;
+    height: 100px !important;
+    justify-self: center;
+    }
+  .star-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .sticky-note-cta {
+    width: 20px !important;
+    height: 20px !important;
+    right:5px;
+    bottom:20px;
+  }
+  .sticky-note-cta .arrow-icon {
+    display: none !important;
+  }
+  .animated,
+  .animate-float,
+  .float,
+  .animate-slide,
+  .arrow-down {
+    animation: none !important; 
+  }
+
+  /* Hide SVGs except stars */
+  .section-svg,
+  .lamp-svg,
+  .flower-svg,
+  .glasses-svg {
+    display: none !important;
+  }
+  /* Contact buttons column */
+  .contact-buttons {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+  }
+  .rose, .lamp, .purple, .glasses, .pink, .white {
+    display: none;
+  }
+
+  .star-icon {
+    display: none;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   /* Tablet styles */
+
+
+  .floating-circle {
+    margin: 0 auto !important;
+    left: 40% !important;
+    right: 40% !important;
+    width: 50px !important;
+    height: 50px !important;
+    top:40px !important;
+    margin-bottom: 30px !important;
+  }
+  .circle {
+    width: 100px !important;
+    height: 100px !important;
+    justify-self: center;
+    }
+  .star-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .sticky-note-cta {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  .sticky-note-cta .arrow-icon {
+    display: none !important;
+  }
+  .animated,
+  .animate-float,
+  .animate-slide,
+  .float,
+  .arrow-down {
+    animation: none !important;
+  }
+/* Hide SVGs except stars */
+.section-svg,
+.lamp-svg,
+.flower-svg,
+.glasses-svg {
+  display: none !important;
+}
+.contact-buttons {
+  flex-direction: column !important;
+  gap: 2rem !important;
+  align-items: center !important;
+}
+
+.rose, .lamp, .purple, .glasses, .pink, .white {
+  display: none;
+}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Desktop styles */
+
+
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   /* Large Desktop styles */
+
+
 }
 
 @media (min-width: 1441px) {
   /* 4K styles */
+
+
 }

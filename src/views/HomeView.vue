@@ -16,7 +16,6 @@ import ContactSection from '@/components/shared/ContactSection.vue';
       h5-text="Adobe Photoshop crashed ... again"
       circle-text="Let’s start creating!"
       cta-text="SEE MY WORK"
-      cta-arrow="→"
       cta-link="/selected-works"
      />
     <AboutSection />
