@@ -2,7 +2,7 @@
     <section class="relative w-full min-h-[600px] md:min-h-[800px] bg-[#ededed] overflow-hidden flex flex-col items-center">
       <!-- Floating Circle -->
       <div class="floating-circle absolute top-[25%] right-10 transform -translate-y-1/2">
-        <div class="circle w-56 h-56 md:w-62 md:h-62 border-2 border-[#6381FF] rounded-full flex justify-center items-center text-[#6381FF] text-2xl md:text-4xl animate-float">
+        <div class="circle w-56 h-56 md:w-62 md:h-62 border-2 border-[#161225] rounded-full flex justify-center items-center text-[#161225] text-2xl md:text-4xl animate-float">
           <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">ABOUT ME</h3>
         </div>
       </div>

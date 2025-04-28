@@ -18,6 +18,11 @@
 @media (max-width: 480px) {
   /* Mobile styles */
 
+  .scroll-to-top {
+    display: none !important;
+  }
+
+
   .picture {
     display: none;
   }

@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView, useRoute } from 'vue-router'
 import NavBar from './components/shared/NavBar.vue';
+import ScrollToTop from './components/shared/ScrollToTop.vue';
 
 
 const route = useRoute(); // Access the current route
@@ -12,7 +13,7 @@ const route = useRoute(); // Access the current route
 
     <NavBar />
     <RouterView />
-
+    <ScrollToTop />
   </div>
 
  
