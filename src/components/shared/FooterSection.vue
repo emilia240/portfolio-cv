@@ -1,26 +1,26 @@
 <template>
     <footer
       :class="[
-        'w-full !py-4 flex flex-col items-center justify-center text-center',
+        'w-full min-h-[100px] md:min-h-[150px] !py-2 sm:!py-4 flex flex-col items-center justify-center text-center',
         bgClass
       ]"
     >
       <!-- First Line: Thank YOU -->
-      <div class="flex flex-row items-baseline">
-        <h2 class="text-2xl md:text-4xl font-forum" :class="textClass">Thank</h2>
-        <h2 class="text-2xl md:text-4xl font-vina-sans" :class="textClass">YOU!</h2>
+      <div class="flex flex-row items-baseline gap-1">
+        <h2 class="font-forum" :class="textClass">Thank </h2>
+        <h2 class="font-vina-sans" :class="textClass">YOU!</h2>
       </div>
   
       <!-- Second Line: Looking forward -->
-      <p class="!mt-2  text-lg md:text-xl font-montserrat" :class="textClass">
+      <p class="font-montserrat" :class="textClass">
         Looking forward to working with you!
       </p>
   
       <!-- Divider Line -->
-      <div class="w-full h-[1px] !my-3" :class="dividerClass"></div>
+      <div class="w-full h-[1px] !my-1 sm:!my-3" :class="dividerClass"></div>
   
       <!-- Third Line: Copyright -->
-      <p class="text-sm md:text-xs font-montserrat" :class="textClass">
+      <p class="font-montserrat" :class="textClass">
         © 2025. EMILIA MARIA SCORȚANU. ALL RIGHTS RESERVED.
       </p>
     </footer>
@@ -56,12 +56,17 @@ const dividerClass = computed(() =>
 <style scoped>
 .font-forum {
   font-family: "Forum", serif;
+  font-size: clamp(1rem, 1.8vw, 2.4rem);
+
 }
 .font-vina-sans {
   font-family: "Vina Sans", sans-serif;
   font-weight: normal;
+  font-size: clamp(0.8rem, 1.8vw, 2.4rem);
+
 }
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.4rem, 1vw, 1.5rem);
 }
 </style>

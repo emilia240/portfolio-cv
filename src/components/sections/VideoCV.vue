@@ -1,7 +1,7 @@
 <template>
-  <section class="relative w-full min-h-[400px] bg-[#ededed] flex flex-col items-center justify-center !py-8">
+  <section class="relative w-full min-h-[500px] md:min-h-[900px] bg-[#ededed] flex flex-col items-center justify-center !py-8">
     <!-- VIDEO CV Title -->
-    <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm md:text-4xl text-[#161225] !mb-6 md:!mb-12">
+    <h3 class="text-[#161225] !mb-6 md:!mb-12">
       VIDEO CV
     </h3>
     <!-- Outer Rectangle with Tape, tapes now follow the rectangle -->

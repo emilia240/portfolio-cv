@@ -1,42 +1,42 @@
 <template >
     <section
       :class="[
-        'relative w-full min-h-[400px] md:min-h-[500px] sm:min-h-[400px] flex flex-col items-center overflow-visible !mt-[5%]',
+        'relative w-full min-h-[150px] md:min-h-[400px] sm:min-h-[300px] flex flex-col items-center overflow-visible !mt-[5%]',
         bgClass
       ]"
     >
       <!-- Floating Circle -->
       <div class="floating-circle absolute top-[30%] left-[7%] transform -translate-y-1/2 z-10 ">
         <div
-          class="circle w-56 h-56 md:w-72 md:h-72 border-2 rounded-full flex justify-center items-center text-2xl md:text-4xl font-vina-sans animate-float"
+          class="circle w-[30vw] min-w-[60px] max-w-[180px] md:w-[20vw] md:max-w-[250px] xl:max-w-[320px] h-auto aspect-square border-2 rounded-full flex justify-center items-center font-vina-sans animate-float"
           :class="[circleBorderClass, circleTextClass]"
         >
-          <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">CONTACT ME</h3>
+          <h3>CONTACT ME</h3>
         </div>
       </div>
   
       <!-- Sticky Note CTA (top right) -->
-      <div class="sticky-note-cta absolute top-0 right-60 z-20 rotate-[-8deg] xs:left-[80%]">
-      <div class="absolute -top-2 -left-4 w-20 h-6 bg-[#6381FF] opacity-90 -rotate-14 z-10"></div>
-        <div class="w-35 h-35 md:w-48 md:h-48 flex justify-center items-center relative" :class="stickyBgClass">
+      <div class="sticky-note-cta absolute top-0 right-60 z-20 rotate-[-8deg]">
+      <div class="tape absolute -top-2 -left-4 w-[10vw] min-w-[20px] max-w-[40px] h-[1.5vw] min-h-[15px] max-h-[15px] md:w-[10vw] md:max-w-[60px] md:h-[2vw] md:max-h-[18px] bg-[#6381FF] opacity-90 -rotate-14 z-10"></div>
+        <div class="w-[10vw] min-w-[60px] max-w-[100px] h-[10vw] min-h-[60px] max-h-[100px] md:w-[16vw] md:max-w-[160px] md:h-[16vw] md:max-h-[160px] flex justify-center items-center relative" :class="stickyBgClass">
           <a
             v-if="variant === 'home'"
             href="/selected-works"
-            class="flex flex-col items-center justify-center text-xs md:text-lg text-center no-underline transition-colors duration-200"
+            class="flex flex-col items-center justify-center  text-center no-underline transition-colors duration-200"
             :class="stickyTextClass"
           >
-            SELECTED WORKS
+            <h4 class="font-vina-sans">SELECTED WORKS</h4>
             <ArrowIcon direction="right" :size="22" :color="variant === 'home' ? '#E476E4' : '#161225'" class="arrow-icon !ml-2 !mt-[5%] animate-slide" />
           </a>
             <a
               v-else
               href="/cv.pdf"
               download
-              class="flex flex-col items-center justify-center text-xs md:text-base text-center no-underline transition-colors duration-200"
+              class="flex flex-col items-center justify-center text-center no-underline transition-colors duration-200"
               :class="stickyTextClass"
             >
-              DOWNLOAD CV
-              <ArrowIcon direction="down" :size="22" :color="variant === 'home' ? '#E476E4' : '#161225'" class="arrow-icon !mt-[5%] mx-auto mt-2 arrow-down"></ArrowIcon>
+              <h4 class="font-vina-sans">DOWNLOAD CV</h4>
+              <ArrowIcon direction="down" :size="22" :color="variant === 'home' ? '#E476E4' : '#161225'" class="arrow-icon !mt-[5%] mx-auto arrow-down"></ArrowIcon>
             </a>
           </div>
         </div>
@@ -45,10 +45,10 @@
         <img
           src="@/assets/images/flowers/white-flower-small.png"
           alt="White Flower"
-          class="white absolute right-20 top-80 w-[180px] md:w-[300px] h-auto z-30 pointer-events-none"
+          class="white absolute right-20 top-70 w-[30vw] max-w-[180px] min-w-[40px] md:w-[20vw] md:max-w-[250px] h-auto z-30 pointer-events-none"
         />
     
-        <!-- Contact Content -->
+        <!-- Stars -->
 
         <StarIcon
         class="star-icon absolute top-[60%] right-[5%] z-20 "
@@ -73,18 +73,18 @@
 
 
         <!-- Contact Content -->
-        <div class="flex flex-col items-center justify-center min-h-[400px] w-full z-20 !mt-[5%]">
-          <p class="!mb-5 text-xl md:text-2xl font-forum" :class="textClass">Feel free to reach out to me</p>
+        <div class="flex flex-col items-center justify-center min-h-[300px] w-full z-20 !mt-[5%]">
+          <p class="!mb-5 font-forum" :class="textClass">Feel free to reach out to me</p>
           <div class="contact-buttons flex gap-8">
             <!-- LinkedIn Button -->
           <a
             href="https://www.linkedin.com/in/emiliamariascortanu"
             target="_blank"
             rel="noopener"
-            class="group flex items-center !px-8 !py-4 border-2 rounded-2xl text-xl md:text-6xl font-vina-sans transition-colors duration-200"
+            class="group flex items-center !px-8 !py-4 border-2 rounded-2xl font-vina-sans transition-colors duration-200"
             :class="buttonClass"
           >
-            LINKEDIN
+            <h3>LINKEDIN</h3>
             <svg
               class="!ml-3 transition-colors duration-200"
               width="45"
@@ -107,10 +107,10 @@
           <!-- Email Button -->
           <a
             href="mailto:emiliamariascortanu@gmail.com"
-            class="group flex items-center !px-8 !py-4 border-2 rounded-2xl text-xl md:text-6xl font-vina-sans transition-colors duration-200"
+            class="group flex items-center !px-8 !py-4 border-2 rounded-2xl font-vina-sans transition-colors duration-200"
             :class="buttonClass"
           >
-            EMAIL
+            <h3>EMAIL</h3>
             <svg
               class="!ml-3 transition-colors duration-200"
               width="45"
@@ -174,6 +174,10 @@ const textClass = computed(() =>
 
 
   <style scoped>
+  p {
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    }
+
   .font-vina-sans {
     font-family: "Vina Sans", sans-serif;
     font-weight: normal;

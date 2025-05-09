@@ -1,40 +1,40 @@
 <template>
-    <section class="relative w-full min-h-[700px] md:min-h-[900px] bg-[#ededed] overflow-visible flex flex-col items-center">
+    <section class="relative w-full min-h-[700px] md:min-h-[1000px] bg-[#ededed] overflow-visible flex flex-col items-center">
       <!-- Floating Circle -->
       <div class="floating-circle absolute top-1/5 left-[10%] transform -translate-y-1/2 z-10">
-        <div class="circle w-56 h-56 md:w-72 md:h-72 border-2 border-[#161225] rounded-full flex justify-center items-center text-[#161225] text-2xl md:text-4xl font-vina-sans animate-float">
-          <h3 class="text-xl sm:text-2xl md:text-4xl xs:text-sm">SKILLS</h3>
+        <div class="circle w-[30vw] min-w-[60px] max-w-[180px] md:w-[20vw] md:max-w-[250px] xl:max-w-[320px] h-auto aspect-square border-2 border-[#161225] rounded-full flex justify-center items-center text-[#161225] text-2xl md:text-4xl font-vina-sans animate-float">
+          <h3>SKILLS</h3>
         </div>
       </div>
   
       <!-- First Row: Design -->
-      <div class="flex items-center justify-end w-full !pr-[10%]  xs:flex-col">
+      <div class="flex items-center justify-end w-full !pr-[10%]">
         <!-- Design Label -->
         <div class="!mr-[10%] !mt-[25%]">
-          <span class="font-forum text-3xl md:text-4xl text-[#161225]">Design</span>
+          <span class="font-forum text-[#161225]"><h5>Design</h5></span>
         </div>
         <!-- 3 Skill Cards -->
         <div class="flex">
           <!-- Card 1 -->
-          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
-            <span class="font-vina-sans text-2xl text-[#E476E4]">POSTER</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">LOGOS</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">LAYOUTS</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">BRANDING</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">MOCKUPS</span>
+          <div class="w-[190px] h-[410px] border-t-2 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+            <span class="font-vina-sans text-[#E476E4]"><h4>POSTER</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>LOGOS</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>LAYOUTS</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>BRANDING</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>MOCKUPS</h4></span>
           </div>
           <!-- Card 2 -->
-          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
-            <span class="font-vina-sans text-2xl text-[#E476E4]">STORYBOARDING</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">VIDEO EDITING</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">SOUND DESIGN</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">MOTION GRAPHICS</span>
+          <div class="w-[190px] h-[410px] border-t-2 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+            <span class="font-vina-sans  text-[#E476E4]"><h4>STORYBOARDING</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>VIDEO EDITING</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>SOUND DESIGN</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>MOTION GRAPHICS</h4></span>
           </div>
           <!-- Card 3 -->
-          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
-            <span class="font-vina-sans text-2xl text-[#E476E4]">UX RESEARCH</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">WIREFRAMING</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">PROTOTYPING</span>
+          <div class="w-[190px] h-[410px] border-t-2 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+            <span class="font-vina-sans  text-[#E476E4]"><h4>UX RESEARCH  </h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>WIREFRAMING</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>PROTOTYPING</h4></span>
           </div>
         </div>
       </div>
@@ -45,34 +45,34 @@
         <img
           src="@/assets/images/flowers/pink-flower-small.png"
           alt="Flower"
-          class="pink absolute left-[10%] top-1/3 -translate-y-1/2 w-[80px] md:w-[250px] h-auto -rotate-14"
+          class="pink absolute left-[10%] top-1/3 -translate-y-1/2 w-[30vw] max-w-[100px] min-w-[50px] md:w-[15vw] md:max-w-[320px] h-auto -rotate-14"
         />
         <!-- Development Label -->
         <div class="!mr-[10%] !mt-[25%]">
-          <span class="font-forum text-3xl md:text-4xl sm:text-xl text-[#161225]">Development</span>
+          <span class="font-forum text-[#161225]"><h5>Development</h5></span>
         </div>
         <!-- 2 Skill Cards -->
-        <div class="flex xs:!p-[10px]">
+        <div class="flex">
           <!-- Card 1 -->
-          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
-            <span class="font-vina-sans text-2xl text-[#E476E4]">HTML</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">CSS</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">TAILWIND</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">GITHUB</span>
+          <div class="w-[190px] h-[410px] border-t-2 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+            <span class="font-vina-sans  text-[#E476E4]"><h4>HTML</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>CSS</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>TAILWIND</h4></span>
+            <span class="font-vina-sans  text-[#E476E4]"><h4>GITHUB</h4></span>
           </div>
           <!-- Card 2 -->
-          <div class="w-[190px] h-[410px] xs:w-[80px] xs:h-[140px] border-t-4 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
-            <span class="font-vina-sans text-2xl text-[#E476E4]">WORDPRESS</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">PHP</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">JAVASCRIPT</span>
-            <span class="font-vina-sans text-2xl text-[#E476E4]">VUE.JS</span>
+          <div class="w-[190px] h-[410px] border-t-2 border-l-4 border-[#E476E4] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-center gap-[5%] !mr-5 !pl-[8%]">
+            <span class="font-vina-sans text-[#E476E4]"><h4>WORDPRESS</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>PHP</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>JAVASCRIPT</h4></span>
+            <span class="font-vina-sans text-[#E476E4]"><h4>VUE.JS</h4></span>
           </div>
         </div>
         <!-- Glasses svg -->
         <img
           src="@/assets/images/svg/glasses.svg"
           alt="Glasses"
-          class="glasses section-svg absolute right-[5%] top-2/6 -translate-y-1/2 w-[100px] md:w-[250px] h-auto -rotate-14"
+          class="glasses section-svg absolute right-[5%] top-2/6 -translate-y-1/2 w-[8vw] max-w-[100px] min-w-[40px] md:w-[12vw] md:max-w-[230px] xl:max-w-[350px] h-auto -rotate-14"
         />
         <!-- Stars -->
 
@@ -113,6 +113,10 @@
 
 
   <style scoped>
+  h5 {
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-weight: 600;
+  }
   .font-vina-sans {
     font-family: "Vina Sans", sans-serif;
     font-weight: normal;

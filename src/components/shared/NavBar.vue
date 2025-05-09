@@ -7,29 +7,28 @@ const isOpen = ref(false); // Controls mobile menu visibility
 
 <template>
   <nav class="w-full !p-0 !m-0 relative z-50 bg-[#161225] text-[#DAC6E1]">
-    <div class="mx-auto max-w-7xl !px-8 lg:px-4">
+    <div class="!mx-auto lg:!mx-[5rem] !px-8 lg:!px-4">
       <div class="flex items-center justify-between !py-4">
-        <div class="flex flex-1"></div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex lg:gap-x-15">
+        <div class="hidden lg:flex lg:gap-x-10">
           <!-- Show "Contact me" only on SelectedWorksView -->
           <a
             v-if="$route.path === '/selected-works'"
             href="#contact"
-            class="text-lg font-medium hover:text-accent transition-colors"
+            class="hover:text-accent transition-colors"
           >
             <h5>Contact me</h5>
           </a>
           <!-- Show other links on HomeView -->
           <template v-else>
-            <a href="#about" class="text-lg font-medium hover:text-accent transition-colors">
+            <a href="#about" class="hover:text-accent transition-colors">
               <h5>About me</h5>
             </a>
-            <a href="#contents" class="text-lg font-medium hover:text-accent transition-colors">
+            <a href="#contents" class="hover:text-accent transition-colors">
               <h5>Table of contents</h5>
             </a>
-            <a href="#contact" class="text-lg font-medium hover:text-accent transition-colors">
+            <a href="#contact" class="hover:text-accent transition-colors">
               <h5>Contact me</h5>
             </a>
           </template>
@@ -40,7 +39,7 @@ const isOpen = ref(false); // Controls mobile menu visibility
           <RouterLink
             v-if="$route.path === '/'"
             to="/selected-works"
-            class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
+            class="group flex items-center gap-2 hover:text-accent transition-colors"
           >
             <h5>Selected works</h5>
             <svg
@@ -62,7 +61,7 @@ const isOpen = ref(false); // Controls mobile menu visibility
           <RouterLink
             v-else
             to="/"
-            class="group flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors"
+            class="group flex items-center gap-2 hover:text-accent transition-colors"
           >
             <h5>Back to frontpage</h5>
             <svg
@@ -86,7 +85,7 @@ const isOpen = ref(false); // Controls mobile menu visibility
         <div class="flex lg:hidden">
           <button
             type="button"
-            class="-m-2.5 !ml-4 inline-flex items-center justify-center rounded-md p-2.5 hover:bg-[#DAC6E1]/20 transition-colors cursor-pointer"
+            class="!ml-4 inline-flex items-center justify-center rounded-md hover:bg-[#DAC6E1]/20 transition-colors cursor-pointer"
             @click="isOpen = true"
           >
             <span class="sr-only">Open menu</span>
@@ -111,13 +110,13 @@ const isOpen = ref(false); // Controls mobile menu visibility
 
       <!-- Menu Content -->
       <div
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#ededed] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[#161225]/10"
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#ededed] sm:max-w-sm sm:ring-1 sm:ring-[#161225]/10"
       >
         <!-- Close Button -->
         <div class="flex items-center justify-end">
           <button
             type="button"
-            class="-m-2.5 rounded-md p-2.5 text-[#161225]"
+            class="rounded-md text-[#161225]"
             @click="isOpen = false"
           >
             <span class="sr-only">Close menu</span>
@@ -134,14 +133,14 @@ const isOpen = ref(false); // Controls mobile menu visibility
         </div>
 
         <!-- Menu Links -->
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-[#161225]/10">
-            <div class="space-y-2 py-6">
+        <div class="!mt-3 flow-root">
+          <div class="!-my-3 divide-y divide-[#161225]/10">
+            <div class="!space-y-2">
               <!-- Show "Contact me" only on SelectedWorksView -->
               <a
                 v-if="$route.path === '/selected-works'"
                 href="#contact"
-                class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
                 <h5>Contact me</h5>
@@ -150,21 +149,21 @@ const isOpen = ref(false); // Controls mobile menu visibility
               <template v-else>
                 <a
                   href="#about"
-                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                   @click="isOpen = false"
                 >
                   <h5>About me</h5>
                 </a>
                 <a
                   href="#contents"
-                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                   @click="isOpen = false"
                 >
                   <h5>Table of contents</h5>
                 </a>
                 <a
                   href="#contact"
-                  class="text-center block px-6 py-2 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                  class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                   @click="isOpen = false"
                 >
                   <h5>Contact me</h5>
@@ -173,11 +172,11 @@ const isOpen = ref(false); // Controls mobile menu visibility
             </div>
 
             <!-- Mobile Selected Works Button -->
-            <div class="py-6">
+            <div class="page-buttons !py-3">
               <RouterLink
                 v-if="$route.path === '/'"
                 to="/selected-works"
-                class="text-center block px-6 py-2.5 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
                 Selected works
@@ -186,7 +185,7 @@ const isOpen = ref(false); // Controls mobile menu visibility
               <RouterLink
                 v-else
                 to="/"
-                class="text-center block px-6 py-2.5 text-base font-semibold text-[#161225] hover:bg-[#DAC6E1]"
+                class="text-center block text-[#161225] hover:bg-[#DAC6E1]"
                 @click="isOpen = false"
               >
                 Back to frontpage
@@ -205,6 +204,11 @@ nav {
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
+}
+
+.page-buttons {
+  font-family: var(--body-font);
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
 }
 
 /* Desktop link hover animation */

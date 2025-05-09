@@ -20,17 +20,38 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.2;
   background-color: var(--background-color-light);
   color: var(--dark-text-color);
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   font-family: var(--heading-sans-serif-font);
+  font-weight: normal;
 }
 
+/* font sizes */
+
+h1 {
+  font-size: clamp(3rem, 7vw, 8rem);
+  line-height: 1 !important;
+}
+h2 {
+  font-size: clamp(1rem, 2vw, 3rem);
+  line-height: 1 !important;
+
+}
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+}
 h4 {
-  font-family: var(--heading-serif-font);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+h5 {
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 *,
