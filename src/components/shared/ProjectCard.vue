@@ -25,7 +25,7 @@ onMounted(() => {
     :class="project.type === 'school' ? 'border-[#E476E4]' : 'border-[#6381FF]'"
     @click="$emit('redirect', project.type)" ><!-- Emit event to redirect -->
     <!-- Image Slider -->
-    <div class="image-slider h-30 md:h-65 ">
+    <div class="image-slider h-50 md:h-65 ">
       <img 
         :src="project.images[currentImageIndex]" 
         :alt="project.title" 

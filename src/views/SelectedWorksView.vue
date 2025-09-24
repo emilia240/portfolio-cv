@@ -12,7 +12,7 @@
 
   <div class="selected-works w-full !py-4 flex items-center justify-center">
     <!-- Filter Buttons -->
-    <div class="tab-buttons flex justify-between  gap-15 !my-15 !py-20 !px-5">
+    <div class="tab-buttons flex flex-col md:flex-row items-center justify-between !py-5 !my-5 gap-5 md:gap-15 !md:my-15 !md:py-20 !px-5">
       <button 
         @click="tab = 'school'" 
         :class="{ active: tab === 'school' }"
@@ -46,7 +46,7 @@
     </div>
   </div>
   <!-- Dynamic Content -->
-  <div v-if="tab === 'initial'" class="project-grid grid grid-cols-2 gap-y-8">
+  <div v-if="tab === 'initial'" class="project-grid grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-y-8">
       <!-- Render initial state cards -->
       <ProjectCard 
         v-for="project in allProjects" 

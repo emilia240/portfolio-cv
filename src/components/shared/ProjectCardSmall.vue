@@ -27,13 +27,13 @@ const showFullDescription = ref(false); // Add toggle for description
 
 
 <template>
-  <div class="project-card-small border-2 border-[#6381FF] rounded-lg !p-4 grid grid-cols-2 !mx-[2rem]">
+  <div class="project-card-small border-2 border-[#6381FF] rounded-lg !p-4 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 !mx-[2rem]">
     <!-- Image Slider -->
     <div class="image-slider !p-4">
       <img 
         :src="project.images[currentImageIndex]" 
         :alt="project.title" 
-        class="w-full h-30 md:h-130 object-contain"
+        class="w-full md:h-130 object-contain"
       />
     </div>
     <!-- Project Details -->
@@ -41,10 +41,15 @@ const showFullDescription = ref(false); // Add toggle for description
       <div class="flex flex-col ">
         <h3 class="title !mb-[0.5rem] md:text-4xl sm:text-10 font-vina-sans text-[#6381FF]">{{ project.title }}</h3>
         <p class="subtitle !mb-[0.5rem] md:text-lg sm:text-6 font-montserrat text-[#6381FF]">{{ project.subtitle }}</p>
-        <p class="description !mb-[0.5rem] text-sm text-[#DAC6E1]">
-          {{ showFullDescription ? project.description : project.description.slice(0, 100) + '...' }}
+        <p class="description !mb-[0.5rem] text-[#DAC6E1]">
+          <span class="hidden md:inline">{{ project.description }}</span>
+          <span class="md:hidden">
+            {{ showFullDescription ? project.description : project.description.slice(0, 100) + '...' }}
+          </span>
+          
+          <!-- Button only visible on mobile/tablet (hidden on desktop) -->
           <button 
-            class="toggle text-[#DAC6E1] underline cursor-pointer"
+            class="toggle text-[#DAC6E1] underline cursor-pointer md:hidden"
             @click="showFullDescription = !showFullDescription"
           >
             {{ showFullDescription ? 'READ LESS' : 'READ MORE' }}

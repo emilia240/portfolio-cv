@@ -56,17 +56,17 @@ const dividerClass = computed(() =>
 <style scoped>
 .font-forum {
   font-family: "Forum", serif;
-  font-size: clamp(1rem, 1.8vw, 2.4rem);
+  font-size: clamp(1.3rem, 1.8vw, 2.4rem) !important;
 
 }
 .font-vina-sans {
   font-family: "Vina Sans", sans-serif;
   font-weight: normal;
-  font-size: clamp(0.8rem, 1.8vw, 2.4rem);
+  font-size: clamp(1rem, 1.8vw, 2.4rem) !important;
 
 }
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(0.4rem, 1vw, 1.5rem);
+  font-size: clamp(0.8rem, 1vw, 1.5rem) !important;
 }
 </style>

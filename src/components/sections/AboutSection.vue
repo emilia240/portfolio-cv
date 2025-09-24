@@ -60,7 +60,7 @@
             class="flex flex-col items-center justify-center text-[#E476E4] text-center no-underline"
           >
             <h5 class="font-montserrat">DOWNLOAD CV</h5>
-            <ArrowIcon direction="down" :size="22" class="arrow-icon !mt-[5%] mx-auto mt-2 arrow-down" />
+            <ArrowIcon direction="down" :size="22" class="arrow-icon !mt-[5%] mx-auto arrow-down" />
           </a>
         </div>
       </div>

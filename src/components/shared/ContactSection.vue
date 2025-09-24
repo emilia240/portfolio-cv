@@ -6,7 +6,7 @@
       ]"
     >
       <!-- Floating Circle -->
-      <div class="floating-circle absolute top-[30%] left-[7%] transform -translate-y-1/2 z-10 ">
+      <div class="floating-circle absolute top-[30%] left-[7%] transform -translate-y-1/2 z-10 hidden md:block">
         <div
           class="circle w-[30vw] min-w-[60px] max-w-[180px] md:w-[20vw] md:max-w-[250px] xl:max-w-[320px] h-auto aspect-square border-2 rounded-full flex justify-center items-center font-vina-sans animate-float"
           :class="[circleBorderClass, circleTextClass]"
@@ -16,7 +16,7 @@
       </div>
   
       <!-- Sticky Note CTA (top right) -->
-      <div class="sticky-note-cta absolute top-0 right-60 z-20 rotate-[-8deg]">
+      <div class="sticky-note-cta absolute md:top-0 md:right-45 top-4 right-50 z-20 rotate-[-8deg]">
       <div class="tape absolute -top-2 -left-4 w-[10vw] min-w-[20px] max-w-[40px] h-[1.5vw] min-h-[15px] max-h-[15px] md:w-[10vw] md:max-w-[60px] md:h-[2vw] md:max-h-[18px] bg-[#6381FF] opacity-90 -rotate-14 z-10"></div>
         <div class="w-[10vw] min-w-[60px] max-w-[100px] h-[10vw] min-h-[60px] max-h-[100px] md:w-[16vw] md:max-w-[160px] md:h-[16vw] md:max-h-[160px] flex justify-center items-center relative" :class="stickyBgClass">
           <a
@@ -73,7 +73,7 @@
 
 
         <!-- Contact Content -->
-        <div class="flex flex-col items-center justify-center min-h-[300px] w-full z-20 !mt-[5%]">
+        <div class="flex flex-col items-center justify-center min-h-[300px] w-full z-20 md:!mt-[5%] !mt-[20%]">
           <p class="!mb-5 font-forum" :class="textClass">Feel free to reach out to me</p>
           <div class="contact-buttons flex gap-8">
             <!-- LinkedIn Button -->

@@ -24,13 +24,13 @@ const showFullDescription = ref(false); // Add toggle for description
 </script>
 
 <template>
-  <div class="project-card-large border-2 border-[#E476E4] rounded-lg !p-4 grid grid-cols-2 !mx-[2rem]">
+  <div class="project-card-large border-2 border-[#E476E4] rounded-lg !p-4 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 !mx-[2rem]">
     <!-- Image Slider -->
     <div class="image-slider !p-4">
       <img 
         :src="project.images[currentImageIndex]" 
         :alt="project.title" 
-        class="w-full h-30 md:h-100 object-contain"
+        class="w-full md:h-100 object-contain"
       />
     </div>
     <!-- Project Details -->
@@ -38,7 +38,7 @@ const showFullDescription = ref(false); // Add toggle for description
       <h3 class="title !mb-[0.5rem] md:text-4xl sm:text-10 font-vina-sans text-[#E476E4]">{{ project.title }}</h3>
       <p class="subtitle md:text-lg sm:text-6 font-montserrat text-[#E476E4]">{{ project.subtitle }}</p>
       <p class="duration !mb-[1rem] md:text-xs italic sm:text-4 text-[#DAC6E1]">{{ project.type }} | {{ project.duration }}</p>
-      <p class="description text-sm text-[#DAC6E1]">
+      <p class="description text-[#DAC6E1]">
         {{ showFullDescription ? project.description : project.description.slice(0, 100) + '...' }}
         <button 
           class="toggle text-[#DAC6E1] underline cursor-pointer"
