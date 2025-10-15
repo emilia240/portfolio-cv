@@ -73,6 +73,26 @@ import gardenOfSecretsBookcover from '../assets/images/projects/personal/The-gar
 // Step Out images
 import stepOut from '../assets/images/projects/personal/step-out/step-out.jpg';
 
+//Happen Poster images
+import happenPoster1 from '../assets/images/projects/school/Happen/Happen-v1.jpg';
+import happenPoster2 from '../assets/images/projects/school/Happen/Happen-v2.png';
+
+// Galaxy images
+import galaxy from '../assets/images/projects/personal/galaxy/Galaxy.jpg';
+
+//Happiness images
+import happiness from '../assets/images/projects/personal/happiness/Happiness.jpg';
+
+//The woods images
+import theWoods1 from '../assets/images/projects/personal/the-woods/The-woods-1.jpg';
+import theWoods2 from '../assets/images/projects/personal/the-woods/The-woods-2.jpg';
+
+//Breathe images
+import breathe from '../assets/images/projects/personal/breathe/Breathe.jpg';
+
+//Spin images
+import spin from '../assets/images/projects/personal/spin/Spin.jpg';
+
 // Tool icons
 import illustratorIcon from '../assets/images/svg/tools/illustrator.svg';
 import photoshopIcon from '../assets/images/svg/tools/photoshop.svg';
@@ -253,12 +273,10 @@ theme.`,
     id: 8,
     title: 'ME-OWCH. Who will feed me?',
     subtitle: 'Infographic poster',
-    description: `The task was to create an infographic poster for print using
-Illustrator. I utilized data visualization illustrations and focused on a
-detailed layout to present the information alongside visuals. Given
-the A1 size of the poster, this was an opportunity to carefully craft
-the layout and select legible font families and sizes, ensuring that
-the printed version would be displayed effectively.`,
+    description: `The requirement was to create a Magic/Fantastic/Mutant creature
+poster composition, by blending human and non-human anatomical traits. I developed a surreal tableau featuring a central eyeless girl with butterfly wings,
+ framed within an oval mirror. The layout incorporates other various mutant elements, 
+ all set against an astrological backdrop to create a cohesive, dark,  mysterious and occult-inspired aesthetic that evokes curiosity and intrigue.`,
     images: [
       catsInfographic,
     ],
@@ -319,6 +337,95 @@ Because here’s the truth: a partner’s malice or love isn’t revealed in a s
 `,
     images: [
       stepOut,
+   ],
+    type:'personal',
+    tools: [photoshopIcon]
+  },
+  {
+    id: 13,
+    title: 'Happen Poster',
+    subtitle: 'Posters',
+    description: `We were assigned a fun project to create a collage poster for our
+class. Our goal was to design a vector representation of ourselves. I
+primarily used Illustrator’s pen tool to trace the contours of a photo
+and create a cartoonish avatar version of myself.`,
+    images: [
+      happenPoster1,
+      happenPoster2,
+    ],
+    type:'school',
+    duration:'1 week, individual assignment',
+    linksProject: '',
+    tools: [photoshopIcon],
+    contribution: ['POSTER DESIGN','PHOTO EDITING']   
+  },
+  {
+    id: 14,
+    title: 'GALAXY',
+    subtitle: 'Double exposure poster',
+    description: `This was my first ever Photoshop piece of work, a dive into blending modes that ultimately
+    resulted in "Galaxy." The piece depicts a woman whose form dissolves into a starry cosmos, leaving only her face, hands, and a bouquet of flowers intact. 
+    It represents a fragile humanity anchored amidst the vast, 
+    beautiful unknown—a visual metaphor for my own beginnings in digital art.`,
+    images: [
+      galaxy,
+   ],
+    type:'personal',
+    tools: [photoshopIcon]
+  },
+  {
+    id: 15,
+    title: 'HAPPINESS',
+    subtitle: 'Double exposure poster',
+    description: `The poster is a quiet celebration of LGBTQ love and intimacy. 
+    The composition frames a black and white composition. On the exposed skin of a woman's back, 
+    I blended an image of two women sharing a tender, smiling moment, close to a kiss. 
+    The personal happiness is felt, rather than performed for the world.`,
+    images: [
+      happiness,
+   ],
+    type:'personal',
+    tools: [photoshopIcon]
+  },
+  {
+    id: 16,
+    title: 'THE WOODS',
+    subtitle: 'Double exposure poster',
+    description: `The images are an ethereal composition where a woman becomes one with the forest. 
+    Standing on a path, her body is ghostly, allowing the trees and the trail itself to bleed through her form. The bouquet she holds is 
+    her most solid feature, a poignant anchor between her spirit and the natural world. This piece was a key lesson in using blending modes to create a sense of haunting unity and belonging.`,
+    images: [
+      theWoods1,
+      theWoods2,
+   ],
+    type:'personal',
+    tools: [photoshopIcon]
+  },
+  {
+    id: 17,
+    title: 'SPIN',
+    subtitle: 'Ballerina poster',
+    description: `This surreal composition isolates a ballerina mid-performance within a vast, dark space. 
+    The focus is on the emotion of the dance itself, with the only color emanating from her pink attire and 
+    the expressive, erratic, painterly strokes on the wall behind her. This visual contrast transforms her movement into a 
+    radiant act of defiance and passion against the void.`,
+    images: [
+      spin,
+   ],
+    type:'personal',
+    tools: [photoshopIcon]
+  },
+  {
+    id: 18,
+    title: 'BREATHE',
+    subtitle: 'Ballerina poster',
+    description: `This poster depicts a ballerina in a poised stance within an abandoned landscape. 
+    Her face is replaced with emerging white flowers, removing personal expression to focus 
+    on form and the haunting atmosphere. The image evokes a 
+    sense of timeless decay and quiet resilience, a meditation on stillness and identity. It is a reminder to reclaim
+    our breath and presence amidst chaos.`,
+    images: [
+      breathe,
    ],
     type:'personal',
     tools: [photoshopIcon]
